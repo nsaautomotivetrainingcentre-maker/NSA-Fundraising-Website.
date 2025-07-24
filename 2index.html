@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSA Automotive Training Centre/Academy - Fundraising & Scholarships</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        /* Custom scroll-behavior for smooth scrolling on anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative; /* For close button positioning */
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Specific styling for the lottery/collection sections to ensure they stand out */
+        .lottery-section, .collection-section {
+            @apply p-8 rounded-xl shadow-lg mb-12;
+        }
+        .lottery-section {
+            @apply bg-gradient-to-r from-blue-600 to-purple-700 text-white;
+        }
+        .collection-section {
+            @apply bg-gradient-to-r from-red-700 to-orange-600 text-white;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md py-4 px-6 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <!-- Logo - NSA Automotive Training Centre/Academy -->
+            <a href="#hero" class="flex items-center space-x-2 flex-shrink-0">
+                <!-- Placeholder for NSA Automotive Training Centre/Academy Logo -->
+                <img src="https://placehold.co/40x40/0A5F44/FFF?text=NSA" alt="NSA Academy Logo" class="h-10 w-auto rounded-md">
+                <span class="text-2xl font-bold text-gray-900">NSA Automotive Training Centre/Academy</span>
+            </a>
+
+            <!-- Mobile Menu Button (visible on small screens) -->
+            <div class="md:hidden flex items-center ml-auto">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Desktop - hidden on small screens) -->
+            <div class="hidden md:flex space-x-8 ml-auto items-center" id="desktop-menu">
+                <a href="#hero" class="text-gray-600 hover:text-green-700 font-medium transition duration-300 ease-in-out rounded-md px-3 py-2">Home</a>
+                <a href="#mission" class="text-gray-600 hover:text-green-700 font-medium transition duration-300 ease-in-out rounded-md px-3 py-2">Our Mission</a>
+                <a href="#scholarships" class="text-gray-600 hover:text-green-700 font-medium transition duration-300 ease-in-out rounded-md px-3 py-2">Scholarships & Bursaries</a>
+                <a href="#fundraising" class="text-gray-600 hover:text-green-700 font-medium transition duration-300 ease-in-out rounded-md px-3 py-2">Fundraising Initiatives</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-700 font-medium transition duration-300 ease-in-out rounded-md px-3 py-2">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default, stacked and bolder) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="#hero" class="block text-gray-600 hover:text-green-700 font-extrabold px-4 py-2 rounded-md transition duration-300 ease-in-out">Home</a>
+            <a href="#mission" class="block text-gray-600 hover:text-green-700 font-extrabold px-4 py-2 rounded-md transition duration-300 ease-in-out">Our Mission</a>
+            <a href="#scholarships" class="block text-gray-600 hover:text-green-700 font-extrabold px-4 py-2 rounded-md transition duration-300 ease-in-out">Scholarships & Bursaries</a>
+            <a href="#fundraising" class="block text-gray-600 hover:text-green-700 font-extrabold px-4 py-2 rounded-md transition duration-300 ease-in-out">Fundraising Initiatives</a>
+            <a href="#contact" class="block text-gray-600 hover:text-green-700 font-extrabold px-4 py-2 rounded-md transition duration-300 ease-in-out">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-r from-green-800 to-green-600 text-white py-20 md:py-32 flex items-center justify-center min-h-screen-75 rounded-b-2xl shadow-xl">
+        <div class="container mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                🌟 Fund a Future: Support NSA Automotive Training Centre/Academy 🌟
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-4xl mx-auto opacity-90">
+                Your contribution directly empowers less fortunate youth with state-of-the-art automotive education and guaranteed permanent employment.
+            </p>
+            <a href="#fundraising" class="bg-yellow-400 text-green-900 hover:bg-yellow-500 px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-8 inline-block">
+                See Our Fundraising Initiatives
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Mission Section (Brief for context) -->
+    <section id="mission" class="py-16 md:py-24 bg-gray-900 text-white text-center rounded-t-2xl shadow-xl">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8">Our Mission: Transforming Lives Through Automotive Education</h2>
+            <p class="text-xl leading-relaxed mb-4">
+                The NSA Automotive Training Centre/Academy is a **non-profit organization** dedicated to providing life-changing opportunities for passionate, less fortunate youth across South Africa and neighboring countries.
+            </p>
+            <p class="text-xl leading-relaxed font-bold">
+                We offer **state-of-the-art education** and ensure **guaranteed permanent employment after graduation**, with an ambitious goal to **employ over 4,000 individuals** in 3-5 years, building stronger communities.
+            </p>
+            <p class="text-xl leading-relaxed mt-6">
+                This page serves as a vital **financial backbone** to support these initiatives through scholarships, bursaries, and various fundraising efforts.
+            </p>
+        </div>
+    </section>
+
+    <!-- Scholarships & Bursaries Section -->
+    <section id="scholarships" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Scholarships & Bursaries: Investing in Talent</h2>
+            <p class="text-lg text-gray-700 mb-10 text-center max-w-4xl mx-auto">
+                Our scholarship and bursary programs are designed to remove financial barriers, ensuring that deserving youth, regardless of their economic background, can access our high-quality automotive training and secure a promising future.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-green-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-green-700 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.477 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Empowering Access</h3>
+                    <p class="text-gray-700">Scholarships cover tuition, materials, and living expenses, ensuring students can focus entirely on their studies and practical training.</p>
+                </div>
+
+                <div class="bg-green-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-green-700 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Future-Proofing Careers</h3>
+                    <p class="text-gray-700">By funding a scholarship, you directly contribute to a student's journey from training to guaranteed permanent employment.</p>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="#contact" class="bg-green-600 text-white hover:bg-green-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Inquire About Sponsoring a Scholarship
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundraising Initiatives Section -->
+    <section id="fundraising" class="py-16 md:py-24 bg-green-700 text-white">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
+            <h2 class="text-4xl font-bold mb-12">Our Fundraising Initiatives: Your Support, Their Success</h2>
+            <p class="text-xl mb-10 opacity-90">
+                All proceeds from these initiatives directly fund the NSA Automotive Training Centre/Academy, enabling us to provide state-of-the-art education and guaranteed employment for less fortunate youth.
+            </p>
+
+            <!-- Ultimate Collection Offer -->
+            <div class="collection-section">
+                <h3 class="text-4xl font-extrabold mb-6">Unlock Comprehensive Knowledge: The Ultimate Collection!</h3>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    For the ultimate professional, this package is the **BEST INVESTMENT A COMPANY CAN MAKE FOR RUNNING A SUPER COOL BUSINESS FOR YEARS TO COME.**
+                </p>
+                <ul class="text-xl mb-8 list-disc list-inside mx-auto max-w-md text-left space-y-2">
+                    <li>**Complete AllData & Workshop Software:** For running a smooth workshop environment, covering complete trucks and cars, with free updates for one year.</li>
+                    <li>**TEXA Software (Choice of Car OR Truck):** Client chooses *either* the TEXA Car software *or* the TEXA Truck software, with free updates for one year.</li>
+                    <li>**Mobile Handset/Android Phone Software:** Fully activated, to use on their Android phone, with free updates for one year.</li>
+                    <li>**X-DECODER 10-3 Software:** With free updates for one year.</li>
+                    <li>**PLUS: Free Technical Support for one year!**</li>
+                    <li>**"Extra Pudding" Bonus:** 3 extra mobile software installations of the winner's choice for technicians (or Wi-Fi or Brother software), fully activated.</li>
+                    <li>**Business Management Bonus:** Service Reception Organizer Software – **KEEPING YOUR BUSINESS RUNNING SMOOTH LIKE A BABBYS BUM!**</li>
+                </ul>
+                <p class="text-xl text-yellow-300 font-semibold mb-4">
+                    Promotion only valid while stock last! Special starts July 20, 2025 and ends on August 10, 2025, or when stock is sold out.
+                </p>
+                <div class="bg-gradient-to-r from-red-800 to-orange-700 text-white p-8 rounded-xl shadow-lg inline-block transform hover:scale-105 transition duration-300 ease-in-out">
+                    <p class="text-5xl font-extrabold mb-4">ZAR 50,000.00</p>
+                    <p class="text-xl">One-time purchase for this essential, high-value technical data package!</p>
+                </div>
+                <a href="#contact" class="inline-block bg-white text-green-900 hover:bg-gray-200 px-10 py-4 rounded-full text-lg font-semibold mt-8 shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Inquire About the Ultimate Collection
+                </a>
+            </div>
+
+            <!-- Big Surprise Lottery Section -->
+            <div class="lottery-section">
+                <h3 class="text-4xl font-extrabold mb-6">🎉 Another Big Surprise: Test Your Luck! 🎉</h3>
+                <p class="text-xl mb-6">
+                    Enter the draw for a chance to win the exact same promotional package software deal!
+                </p>
+                <ul class="text-xl list-disc list-inside mx-auto max-w-md text-left mb-6 space-y-2">
+                    <li>**Standard Entry:** A ticket for the draw is **ZAR 150.00 for 1 ticket!**</li>
+                    <li>**Referral Bonus:** For every **ZAR 1,000.00 spent by a paying client you bring to us**, you earn **1 point**. Accumulate **10 points** to get **1 entry** into the draw. Keep the receipt as proof of purchase of the client you introduced supporting us.</li>
+                </ul>
+                <p class="text-xl font-semibold mb-4">
+                    **Draw Details:**
+                </p>
+                <ul class="text-xl list-disc list-inside mx-auto max-w-md text-left mb-8 space-y-2">
+                    <li>Entries close on: **August 25, 2025**</li>
+                    <li>Draw takes place on: **September 1, 2025**</li>
+                </ul>
+                <h4 class="text-3xl font-extrabold mb-4">Amazing Prizes:</h4>
+                <ul class="text-xl list-disc list-inside mx-auto max-w-md text-left space-y-2">
+                    <li>**1st Prize:** The exact same promotional package software deal (ZAR 50,000.00 Ultimate Collection)!</li>
+                    <li>**2nd Prize:** CarPal Bluetooth Device and relevant CarPal diagnostic software, with free updates for 1 year.</li>
+                    <li>**3rd Prize:** A DIY small socket set (34 piece), a medium size screwdrivers set, an OBD Bluetooth dongle, and Torque Pro 2 diagnostic software.</li>
+                </ul>
+                <a href="#contact" class="inline-block bg-white text-green-900 hover:bg-gray-200 px-10 py-4 rounded-full text-lg font-semibold mt-8 shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Enter the Draw / Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-green-800 text-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-4xl font-bold mb-8">Connect with NSA Automotive Training Centre/Academy Fundraising</h2>
+            <p class="text-xl mb-10 opacity-90">
+                For inquiries about our fundraising initiatives, scholarships, or how to contribute, please contact us:
+            </p>
+            <div class="space-y-6 md:space-y-0 md:flex md:justify-center md:space-x-8">
+                <div class="flex items-center justify-center text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9l2.572-5.432a1 1 0 01.947-.684H19a2 2 0 012 2v10a2 2 0 01-2 2h-3.28a1 1 0 01-.948-.684L13.5 15l-2.572 5.432a1 1 0 01-.947.684H5a2 2 0 01-2-2V5z" />
+                    </svg>
+                    <span>073-011-7680 (Main)</span>
+                </div>
+                <div class="flex items-center justify-center text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v4m0 4v4a2 2 0 002 2h14a2 2 0 002-2v-4m-2-4h-4l-2-2m0 0L9 10H5" />
+                    </svg>
+                    <span>fundraising@nsaautomotiveacademy.org (Placeholder)</span>
+                </div>
+                <div class="flex items-center justify-center text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>79 15th Ave Boksburg North 1459 Gauteng</span>
+                </div>
+                <div class="flex items-center justify-center text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                    <span>074-071-2230 (WhatsApp)</span>
+                </div>
+            </div>
+            <p class="text-xl mt-6 opacity-90">
+                Supporting training centers nationwide.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-6 rounded-t-2xl">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2025 NSA Automotive Training Centre/Academy. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out privacy-policy-link">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out terms-of-service-link">Terms of Service</a>
+            </div>
+            <div class="mt-6 flex justify-center space-x-4">
+                <!-- Placeholder Social Media Icons (replace with actual SVG/Font Awesome) -->
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out social-link">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.247 0-1.646.777-1.646 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out social-link">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.048.843.04 1.15.14 1.406.276.481.205.855.434 1.21.8.355.36.585.734.798 1.21.137.256.236.563.276 1.407.045 1.013.048 1.371.048 3.797v.655c0 2.43-.003 2.784-.048 3.797-.04.843-.14 1.15-.276 1.406-.205.481-.434.855-.8 1.21-.36.355-.734-.585-1.21-.798-.256-.137-.563-.236-1.407-.276-1.013-.045-1.371-.048-3.797-.048h-.655c-2.43 0-2.784-.003-3.797-.048-.843-.04-1.15-.14-.276-1.406-.481-.205-.855-.434-1.21-.8-.355-.36-.734-.585-1.21-.798-.256-.137-.563-.236-1.407-.276-1.013-.045-1.371-.048-3.797-.048h.655zm.962 11.814a6 6 0 100-12 6 6 0 000 12zm0 2A8 8 0 1012 4a8 8 0 000 16zm5.338-12.879a.975.975 0 00-.975-.975h-.01c-.546 0-.99.444-.99.99 0 .546.444.99.99.99h.01c.546 0 .975-.444.975-.99z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out social-link">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.107 4.107 0 001.27 5.477A4.072 4.072 0 012 10.425v.053a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.007a11.616 11.616 0 006.29 1.844" /></svg>
+                </a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
+    </footer>
+    <!-- Custom Modal for Messages -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modalMessage" class="text-lg text-gray-800"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Custom Modal Functions
+        function showModal(message) {
+            const messageModal = document.getElementById('messageModal');
+            const modalMessage = document.getElementById('modalMessage');
+            modalMessage.textContent = message;
+            messageModal.style.display = 'flex';
+        }
+
+        document.querySelector('#messageModal .close-button').onclick = function() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('messageModal')) {
+                document.getElementById('messageModal').style.display = 'none';
+            }
+        }
+
+        // Handle "Under Construction" links
+        document.querySelectorAll('.privacy-policy-link, .terms-of-service-link, .social-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default link behavior
+                showModal('This section is currently under construction. Please check back later!');
+            });
+        });
+    </script>
+</body>
+</html>
